@@ -1,0 +1,1 @@
+function softScroll(o){return $("html, body").animate({scrollTop:$(o).offset().top-100},400),!1}
