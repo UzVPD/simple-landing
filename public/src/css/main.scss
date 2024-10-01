@@ -29,6 +29,7 @@ a {
 header {
     background: linear-gradient($main-gradient);
     padding-top: 20px;
+    position: relative;
 
     .header-top {
         @extend .flex;
@@ -76,6 +77,8 @@ header {
     .header-main {
         @extend .flex;
         margin-top: 100px;
+        position: relative;
+        z-index: 2;
 
         .info {
             margin-top: 130px;
@@ -99,7 +102,7 @@ header {
                 transition: all .6s ease;
 
                 &:hover {
-                    transform: translateY(-5px) scale(1.1);
+                    transform: translateZ(-5px) scale(1.1);
                 }
             }
         }
@@ -116,9 +119,9 @@ header {
 
     &::after {
         content: "";
-        position: relative;
+        position: absolute;
         left: 0;
-        bottom: -10px;
+        bottom: 0px;
         width: 100%;
         height: 0;
         z-index: 1;
