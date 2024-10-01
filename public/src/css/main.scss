@@ -81,7 +81,7 @@ header {
         z-index: 2;
 
         .info {
-            margin-top: 130px;
+            margin-top: 50px;
             color: $white;
             font-size: 24px;
 
@@ -109,7 +109,6 @@ header {
 
         .image {
             max-width: 500px;
-            z-index: 2;
 
             .header-img {
                 width: 100%;
@@ -128,5 +127,39 @@ header {
         border-bottom: 0;
         border-top: 230px solid transparent;
         border-right: 100vw solid $white;
+    }
+}
+
+.features {
+    margin-top: 200px;
+    padding-bottom: 90px;
+    border-bottom: 1px solid #e0e0e0;
+    color: #000;
+
+    .block {
+        @extend .flex;
+        align-items: center;
+
+        .info {
+            max-width: 500px;
+
+            h2 {
+                font-size: 50px;
+                font-weight: 700;
+                color: #000;
+            }
+        }
+
+        .image {
+            max-width: 500px;
+
+            img {
+                width: 100%;
+            }
+
+            #build-img {
+                width: 90%;
+            }
+        }
     }
 }
