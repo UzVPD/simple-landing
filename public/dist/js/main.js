@@ -26,3 +26,23 @@ function resizeVideo() {
         $(this).css('height', width / 1.77 + "px");
     })
 }
+
+$('#subscribe').on("click", () => {
+    let email = $('#email').val().trim();
+    if(email.split('@').length != 2) {
+        $('#formId label').text("You entered incorrect email adress.")
+        $('#formId label').addClass('error');
+        $('#formId label').fadeIn();
+    } else {
+        $('#formId label').text("Email submitted successfully!");
+         $('#formId label').addClass('success');
+        $('#formId label').fadeIn();
+        $('#email').val(''); 
+    }
+
+    setTimeout(() => {
+        $('#formId label').fadeOut(() => {
+             $('#formId label').removeClass('error success');
+        });
+    }, 2000)
+})
