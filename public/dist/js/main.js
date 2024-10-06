@@ -27,6 +27,12 @@ function resizeVideo() {
     })
 }
 
+$('.header-top .burger-menu').on('click', function() {
+    $(this).find('i').toggleClass('fa-bars fa-xmark');
+    $('header .mobile-menu').slideToggle();
+});
+
+
 $('#subscribe').on("click", () => {
     let email = $('#email').val().trim();
     if(email.split('@').length != 2) {
